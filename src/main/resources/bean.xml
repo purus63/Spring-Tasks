@@ -36,4 +36,7 @@
         <constructor-arg ref="act3" />
     </bean>
 
+    <bean id="bean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+    </bean>
+
 </beans>

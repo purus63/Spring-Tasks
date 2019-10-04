@@ -9,15 +9,6 @@ import org.springframework.context.ApplicationContextAware;
 
 public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
 
-    /*private static ApplicationContext applicationContext;
-
-    public void setApplicationContext(ApplicationContext context) throws BeansException {
-        applicationContext = context;
-    }
-
-    public static ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }*/
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
