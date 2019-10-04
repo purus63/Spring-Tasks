@@ -21,9 +21,8 @@ package com.stackroute.domain;
         }
 
         public void setName(String name) {
-
-            System.out.println(this.name = name);
-    }
+                this.name = name;
+        }
 
         public void setGender(String gender) {
         this.gender = gender;
@@ -33,14 +32,11 @@ package com.stackroute.domain;
         this.age = age;
     }
 
-
-
-    public Actor(String name, String gender, int age) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-    }
-
+        public Actor(String name, String gender, int age) {
+            this.name = name;
+            this.gender = gender;
+            this.age = age;
+        }
 
         /*@Override
         public String toString() {

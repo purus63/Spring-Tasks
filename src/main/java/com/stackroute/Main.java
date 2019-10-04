@@ -27,7 +27,6 @@ public class Main
         Movie movie2= context.getBean("mov", Movie.class);
         movie2.display();
 
-
     }
 }
 
