@@ -4,52 +4,36 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="mov1" class="com.stackroute.domain.Movie">
-      <property name="act">
-            <bean class="com.stackroute.domain.Actor">
-            <property name="name" value="bhawani" />
-            <property name="gender" value="Male" />
-            <property name="age" value="27" />
-          </bean>
-     </property>
-  </bean>
-
-    <bean name="Movie1,Movie2" class="com.stackroute.domain.Movie" scope="prototype">
-        <property name="act">
-            <bean class="com.stackroute.domain.Actor">
-                <constructor-arg  value="Ram"></constructor-arg>
-                <constructor-arg  value="Male"></constructor-arg>
-                <constructor-arg  value="24"></constructor-arg>
-            </bean>
-        </property>
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <property name="name" value="raj"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="14"/>
     </bean>
 
-<!--    <constructor-arg name="act" ref="act1234"/>-->
-<!--    <bean id="act1234" class="com.stackroute.domain.Actor">-->
-<!--        <property name="name" value="bhawani" />-->
-<!--        <property name="gender" value="Male" />-->
-<!--        <property name="age" value="27" />-->
-<!--    </bean>-->
-
-
-
     <bean id="act1" class="com.stackroute.domain.Actor">
-        <constructor-arg value="Ram"></constructor-arg>
-        <constructor-arg value="Male"></constructor-arg>
-        <constructor-arg value="24"></constructor-arg>
+        <constructor-arg value="A"/>
+        <constructor-arg value="Male"/>
+        <constructor-arg value="23"/>
     </bean>
 
     <bean id="act2" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="Shyam"></constructor-arg>
-        <constructor-arg index="1" value="Male"></constructor-arg>
-        <constructor-arg index="2" value="78"></constructor-arg>
+        <constructor-arg value="B"/>
+        <constructor-arg value="Male"/>
+        <constructor-arg value="23"/>
     </bean>
 
     <bean id="act3" class="com.stackroute.domain.Actor">
-    <constructor-arg value="Gita"></constructor-arg>
-    <constructor-arg value="Feale"></constructor-arg>
-    <constructor-arg value="18"></constructor-arg>
+        <constructor-arg index="0" value="C"/>
+        <constructor-arg index="1" value="Male"/>
+        <constructor-arg index="2" value="23"/>
     </bean>
 
+      <bean id="mov" class="com.stackroute.domain.Movie" autowire="byName">
+
+        </bean>
+
+    <bean id="mov1" class="com.stackroute.domain.Movie" >
+        <constructor-arg ref="act3" />
+    </bean>
 
 </beans>
