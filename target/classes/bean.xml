@@ -4,14 +4,42 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="mov" class="com.stackroute.domain.Movie">
-      <property name="act">
-            <bean class="com.stackroute.domain.Actor">
-            <property name="name" value="bhawani" />
-            <property name="gender" value="Male" />
-            <property name="age" value="27" />
-          </bean>
-     </property>
-  </bean>
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <property name="name" value="raj"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="14"/>
+    </bean>
+
+    <bean id="act1" class="com.stackroute.domain.Actor">
+        <constructor-arg value="A"/>
+        <constructor-arg value="Male"/>
+        <constructor-arg value="23"/>
+    </bean>
+
+    <bean id="act2" class="com.stackroute.domain.Actor">
+        <constructor-arg value="B"/>
+        <constructor-arg value="Male"/>
+        <constructor-arg value="23"/>
+    </bean>
+
+    <bean id="act3" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="C"/>
+        <constructor-arg index="1" value="Male"/>
+        <constructor-arg index="2" value="23"/>
+    </bean>
+
+      <bean id="mov" class="com.stackroute.domain.Movie" autowire="byName">
+
+        </bean>
+
+    <bean id="mov1" class="com.stackroute.domain.Movie" >
+        <constructor-arg ref="act3" />
+    </bean>
+
+    <bean id="bean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+    </bean>
+
+    <bean id="bean1" class="    com.stackroute.demo.BeanPostProcessorDemoBean">
+    </bean>
 
 </beans>
